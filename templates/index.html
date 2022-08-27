@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Index.html</h1>
+    <form action="/form" method="POST" enctype=multipart/form-data>
+        {{form.growth.label}}
+        {{form.growth }}
+        <br>
+        {{form.yearly_seasonality.label}}
+        {{form.yearly_seasonality }}
+        <br>
+        {{form.weekly_seasonality.label}}
+        {{form.weekly_seasonality }}
+        <br>
+        {{form.daily_seasonality.label}}
+        {{form.daily_seasonality }}
+        <br>
+        {{form.seasonality_mode.label}}
+        {{form.seasonality_mode }}
+        <br>
+        {{form.seasonality_prior_scale.label}}
+        {{form.seasonality_prior_scale }}
+        <br>
+        {{form.holidays_prior_scale.label}}
+        {{form.holidays_prior_scale }}
+        <br>
+        {{form.changepoint_prior_scale.label}}
+        {{form.changepoint_prior_scale }}
+        <br>
+        {{form.mcmc_samples.label}}
+        {{form.mcmc_samples }}
+        <br>
+        {{form.interval_width.label}}
+        {{form.interval_width }}
+        <br>
+        {{form.uncertainty_samples.label}}
+        {{form.uncertainty_samples }}
+        <br>
+        {{form.stan_backend.label}}
+        {{form.stan_backend }}
+        <br>
+        <br>
+        <input type="file" id="file" name="file">
+
+        {{form.submit()}}
+    </form>
+
+
+</body>
+</html>
