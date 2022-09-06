@@ -2,6 +2,7 @@
 # just return csv prediction
 import pandas as pd
 from prophet import Prophet
+import matplotlib.pyplot as plt
 
 
 def forcast(data, params=None):
@@ -50,6 +51,8 @@ def forcast(data, params=None):
     future = model.make_future_dataframe(periods=10)
  
     forecast = model.predict(future)
+    
+    forecast.to_csv("static/csv/forcast.csv")
  
     print("-----------print forcast --------")
 
@@ -57,7 +60,10 @@ def forcast(data, params=None):
 
 
     fig1 = model.plot(forecast)
+    plt.savefig('./static/images/plots/plot1.png')
     fig2 = model.plot_components(forecast)
+    plt.savefig('./static/images/plots/plot2.png')
+
 
     return forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']]
 

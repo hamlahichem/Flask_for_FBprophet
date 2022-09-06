@@ -1,0 +1,11 @@
+cmdstanpy 
+Flask
+prophet
+Flask-WTF
+matplotlib 
+matplotlib-inline
+numpy 
+pandas
+Pillow
+Werkzeug
+WTForms
